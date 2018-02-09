@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+    <style>body {
+  background: #23232E;
+  font-family: Arial Narrow, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #7BA1AD;
+  margin: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.featurebook-container {
+
+}
+
+.featurebook-metadata {
+}
+
+.featurebook-title {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: #ffffff;
+}
+
+.featurebook-title a {
+  color: white;
+  text-decoration: none;
+}
+
+.featurebook-authors a {
+  color: #CC7832;
+}
+
+.featurebook-contributors a {
+  color: #BBB529;
+}
+
+.featurebook-spec-tree {
+  background: #373743;
+  float: left;
+  width: 25%;
+}
+
+.featurebook-spec-tree a:hover {
+    color: #CC7832;
+}
+
+.featurebook-spec-tree ul {
+    padding-left: 2em;
+}
+
+.featurebook-spec-tree-file {
+  color: white;
+  text-decoration: none;
+}
+
+.featurebook-spec-tree-directory {
+  color: #7BA1AD;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: bold;
+  color: #BBB529;
+}
+
+.featurebook-main {
+  background: #373743;
+  float: right;
+  width: 73%;
+}
+
+.featurebook-tag {
+    display: inline-block;
+    margin-right: 0.5em;
+    color: #BBB529;
+}
+
+.featurebook-feature-name {
+  font-size: x-large;
+  color: #ffffff;
+}
+
+.featurebook-background, .featurebook-scenario-definition, .featurebook-examples {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.featurebook-step {
+
+}
+
+.featurebook-step-keyword {
+  color: #CC7832;
+  font-weight: normal;
+  display: inline-block;
+  text-align: right;
+  margin-right: 0;
+  width: 5em;
+  vertical-align: top;
+}
+
+.featurebook-step-text {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.featurebook-doc-string {
+  color: #6A8759;
+}
+
+.featurebook-background-name, .featurebook-scenario-definition-name, .featurebook-examples-name {
+  font-size: large;
+  margin-bottom: 0.5em;
+  color: #ffffff;
+}
+
+.featurebook-examples tr, .featurebook-step tr {
+  border-left: 2px dotted #CC7832;
+}
+
+.featurebook-examples td, .featurebook-step td {
+  border-right: 2px dotted #CC7832;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.featurebook-examples th, .featurebook-step th {
+  border-right: 2px dotted #CC7832;
+  font-weight: normal;
+  color: #9876AA;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="featurebook-container">
+      <div class="featurebook-metadata">
+        <div class="featurebook-title"><a href="./index.html"> </a></div>
+      </div>
+      <aside class="featurebook-spec-tree">
+        <ul>
+                <li><a href="./ususario.feature.html" class="featurebook-spec-tree-file active">Ususario</a></li>
+        </ul>
+      </aside>
+      <main class="featurebook-main">
+        <div class="featurebook-feature-name">Funcionalidade: Inclusão de usuário</div>
+        <div class="featurebook-feature-description featurebook-markdown"></div>
+        <div class="featurebook-background">
+          <div class="featurebook-background-name">Contexto: </div>
+          <div class="featurebook-step"><span class="featurebook-step-keyword">Dado </span><span class="featurebook-step-text">que eu esteja na tela de cadastro de um usuário</span></div>
+        </div>
+        <div class="featurebook-scenario-definition">
+          <div class="featurebook-tag">@new_user</div>
+          <div class="featurebook-scenario-definition-name">Cenário: Cadastro de um novo usuário no portal</div>
+          <div></div>
+          <div class="featurebook-step"><span class="featurebook-step-keyword">Quando </span><span class="featurebook-step-text">eu envio os dados pessoais do usuário</span></div>
+          <div class="featurebook-step"><span class="featurebook-step-keyword">E </span><span class="featurebook-step-text">envio uma senha válida</span></div>
+          <div class="featurebook-step"><span class="featurebook-step-keyword">Então </span><span class="featurebook-step-text">o usuário deve ser cadastrado</span></div>
+        </div>
+        <div class="featurebook-scenario-definition">
+          <div class="featurebook-scenario-definition-name">Cenário: Valida criação de usuário com o CPF já cadastrado</div>
+          <div></div>
+          <div class="featurebook-step"><span class="featurebook-step-keyword">Quando </span><span class="featurebook-step-text">eu preencho os campos de cadastro com um cpf ja cadastrado</span></div>
+          <div class="featurebook-step"><span class="featurebook-step-keyword">E </span><span class="featurebook-step-text">clico em continuar</span></div>
+          <div class="featurebook-step"><span class="featurebook-step-keyword">Então </span><span class="featurebook-step-text">eu devo visualizar a mensagem &quot;O CPF informado já está cadastrado. Por favor, utilize outro CPF.&quot;</span></div>
+        </div>
+        <div class="featurebook-scenario-definition">
+          <div class="featurebook-tag">@new_user</div>
+          <div class="featurebook-scenario-definition-name">Cenário: Valida criação de usuário com email já cadastrado</div>
+          <div></div>
+          <div class="featurebook-step"><span class="featurebook-step-keyword">Quando </span><span class="featurebook-step-text">eu preencho os campos de cadastro com um email ja cadastrado</span></div>
+          <div class="featurebook-step"><span class="featurebook-step-keyword">E </span><span class="featurebook-step-text">clico em continuar</span></div>
+          <div class="featurebook-step"><span class="featurebook-step-keyword">Então </span><span class="featurebook-step-text">eu devo visualizar a mensagem &quot;O e-mail informado já está cadastrado. Por favor, utilize outro e-mail.&quot;</span></div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
